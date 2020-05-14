@@ -146,7 +146,23 @@ add_action( 'wp_enqueue_scripts', function() {
 		'slide-reveal',
 		plugins_url( 'reveal/reveal.min.js', __FILE__ ),
 		array(),
-		'3.8.0',
+		'3.9.2',
+		true
+	);
+
+	wp_enqueue_script(
+		'slide-reveal-marked',
+		plugins_url( 'reveal/marked.min.js', __FILE__ ),
+		array(),
+		'3.9.2',
+		true
+	);
+
+	wp_enqueue_script(
+		'slide-reveal-markdown',
+		plugins_url( 'reveal/markdown.min.js', __FILE__ ),
+		array(),
+		'3.9.2',
 		true
 	);
 
