@@ -74,7 +74,7 @@ registerBlockType('slide/slide', {
             label: __('Anything you want to remember.', 'slide'),
             value: attributes.notes,
             onChange: (notes) => setAttributes({ notes }),
-            rows: 10
+            rows: 2
           })
         ),
         e(
@@ -320,7 +320,7 @@ registerBlockType('slide/slide', {
         label: __('Speaker notes', 'slide'),
         value: attributes.notes,
         onChange: (notes) => setAttributes({ notes }),
-        rows: 5
+        rows: 2
       })
     );
   },
