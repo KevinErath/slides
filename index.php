@@ -207,7 +207,8 @@ add_action( 'wp_enqueue_scripts', function() {
 				'38' => 'prev',
 				'40' => 'next',
 			),
-			'overview' => false,
+			'slideNumber' => true,
+			'overview' => true,
 			// We center in CSS.
 			'center' => false,
 			'pdfMaxPagesPerSlide' => 1
