@@ -203,6 +203,7 @@
 </head>
 <body>
 	<div class="reveal">
+		<a class="slides-logo" href="<?php echo get_site_url(); ?>"></a>
 		<div class="slides">
 			<?php the_content(); ?>
 		</div>
