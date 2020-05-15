@@ -31,6 +31,7 @@ const transitionKey = 'presentation-transition';
 const backgroundTransitionKey = 'presentation-background-transition';
 const transitionSpeedKey = 'presentation-transition-speed';
 const controlsKey = 'presentation-controls';
+const enableThemeCss = 'presentation-themecss';
 const progressKey = 'presentation-progress';
 const widthKey = 'presentation-width';
 const horizontalPaddingKey = 'presentation-horizontal-padding';
@@ -399,6 +400,13 @@ registerPlugin('slide', {
           title: __('Custom CSS', 'slide'),
           icon: 'editor-code'
         },
+		e(ToggleControl, {
+          label: __('Include Theme Css', 'slide'),
+          checked: meta[enableThemeCss] === 'true',
+          onChange: (value) => {
+			  updateMeta(value + '', enableThemeCss)
+		  }
+        }),
         e(CodeEditor, {
           value: meta[cssKey] || '/* Always a block prefix! */\n.wp-block-slide-slide {\n\t\n}\n',
           onChange: (value) => updateMeta(value, cssKey)

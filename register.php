@@ -52,6 +52,7 @@ register_post_type( 'presentation', array(
 
 foreach ( array(
     'css',
+	'themecss',
     'color',
     'background-color',
     'background-gradient',

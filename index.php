@@ -115,11 +115,15 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	$template_directory_uri = get_template_directory_uri();
 
-	foreach ( $wp_styles->queue as $handle ) {
-		$info = $wp_styles->registered[ $handle ];
+	$enable_theme_css = (bool) get_post_meta( get_the_ID(), 'presentation-themecss', true ) ?: false;
 
-		if ( substr( $info->src, 0, strlen( $template_directory_uri ) ) === $template_directory_uri ) {
-			wp_dequeue_style( $handle );
+    if ( $enable_theme_css == false ) {
+		foreach ( $wp_styles->queue as $handle ) {
+			$info = $wp_styles->registered[ $handle ];
+
+			if ( substr( $info->src, 0, strlen( $template_directory_uri ) ) === $template_directory_uri ) {
+				wp_dequeue_style( $handle );
+			}
 		}
 	}
 
