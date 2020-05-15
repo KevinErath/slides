@@ -10,12 +10,13 @@
 .wp-block-slide-slide p,
 .wp-block-slide-slide ol,
 .wp-block-slide-slide ul,
+.wp-block-slide-slide li,
 .wp-block-slide-slide figure,
 .wp-block-slide-slide blockquote,
 .wp-block-slide-slide pre,
 .wp-block-slide-slide .wp-block-code {
 	margin-top: 0;
-	margin-bottom: .5em;
+	margin-bottom: .75em;
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -43,9 +44,7 @@
 	font-style: normal;
 	font-weight: normal;
 	margin-top: 0;
-	/* Back compat */
-	margin-bottom: 0;
-	/* margin-bottom: .5em; */
+	margin-bottom: .5em;
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -55,7 +54,7 @@
 }
 
 .wp-block-slide-slide h2 {
-	font-size: 2em;
+	font-size: 1.7em;
 }
 
 .wp-block-slide-slide h3 {
